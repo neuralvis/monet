@@ -10,6 +10,7 @@ defmodule Monet.Application do
     children = [
       # Starts a worker by calling: Monet.Worker.start_link(arg)
       # {Monet.Worker, arg}
+      {Monet.SimpleQueue, [1, 2, 3]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
