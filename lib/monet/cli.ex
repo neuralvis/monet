@@ -24,3 +24,4 @@ end
 
 # reference for setting nodenames: https://stackoverflow.com/questions/41269876/elixir-set-cookie-and-hostname-for-release-created-using-mix-escript-build
 # reference for no halting: https://stackoverflow.com/questions/30073563/how-can-i-build-an-elixir-escript-that-does-not-halt-the-erlang-vm-after-executi
+# https://elixirforum.com/t/basic-missing-a-fundamental-concept-with-applications-appreciate-help-mix-run-not-waiting/12635/12
