@@ -11,7 +11,7 @@ defmodule Monet.Application do
       # Starts a worker by calling: Monet.Worker.start_link(arg)
       # {Monet.Worker, arg}
       {Monet.SimpleQueue, [1, 2, 3]},
-      {Task.Supervisor, }
+      {Task.Supervisor, name: Monet.TaskSupervisor }
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
