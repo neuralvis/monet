@@ -11,6 +11,7 @@ defmodule Monet.Application do
       # Starts a worker by calling: Monet.Worker.start_link(arg)
       # {Monet.Worker, arg}
       {Monet.SimpleQueue, [1, 2, 3]},
+      {Monet.Pingpong, []},
       {Task.Supervisor, name: Monet.TaskSupervisor }
     ]
 

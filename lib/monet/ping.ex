@@ -1,16 +1,16 @@
 defmodule Monet.Pingpong do
-  
+  use Task 
 
   def start_link(arg) do
-    
+    send_message(:alex@localhost, "Alex, do you copy?")
   end
   
-  def receive(message) do
+  def receive_message(message) do
     IO.puts message
   end
 
-  def send(dest_node, message) do
-    spawn_task(__MODULE__, :receive, dest_node, [message])
+  def send_message(dest_node, message) do
+    spawn_task(__MODULE__, :receive_message, dest_node, [message])
   end
 
   def spawn_task(module, fun, dest_node, msg) do
