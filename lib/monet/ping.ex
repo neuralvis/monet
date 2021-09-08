@@ -1,9 +1,17 @@
-defmodule Monet.Pingpong do
-  use Task 
+defmodule Monet.Ping do
+  use Task
 
-  def start_link(arg) do
-    send_message(:alex@localhost, "Alex, do you copy?")
+  def start_link(arg \\ []) do
+    Task.start_link(__MODULE__, :run, [arg])
   end
+
+  def run(arg) do
+    if Node.self == :"alex@127.0.0.1" do
+      send_message(:"kate@127.0.0.1", "Kate, do you copy?")
+    end
+    IO.puts(Node.self)
+  end
+  
   
   def receive_message(message) do
     IO.puts message

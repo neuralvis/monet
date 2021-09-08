@@ -3,7 +3,7 @@
 ## http://erlang.org/doc/man/erl.html
 
 ## Name of the node
--name nodeB@localhost
+-name ${USER_NAME}@127.0.0.1
 
 ## Cookie for distributed erlang
 -setcookie neuralvis
